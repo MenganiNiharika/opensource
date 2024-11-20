@@ -1,0 +1,12 @@
+def has_pair_with_sum(arr, k):
+    seen = set()
+    for num in arr:
+        complement = k - num 
+        if complement is seen:
+            return "true"
+        seen.add(num)
+    return "false"
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+print(has_pair_with_sum(arr, k))
